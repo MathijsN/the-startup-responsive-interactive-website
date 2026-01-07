@@ -1,12 +1,17 @@
 :root {
     --color-danger: #B34040;
     --color-active: #4F4C4C;
-
     --color-secondary: #FFFFFF;
 
+    --spacing-xs: calc(var(--spacing-s) / 2);
     --spacing-m: 2rem;
     --spacing-s: 1rem;
-    --spacing-xs: calc(var(--spacing-s) / 2);
+
+    --border-radius-s: 0.5rem;
+    --border-radius-m: 1.2rem;
+
+    --font-size-s: 1rem;
+    --font-size-m: 2rem;
 }
 
 *,
@@ -60,9 +65,15 @@ details {
 
         padding: var(--spacing-xs) var(--spacing-s);
         border-radius: var(--spacing-xs);
+
+        &:open {
+            summary {
+            margin-bottom: var(--spacing-s);
+        }
+        }
     }
 
-    &[open] {
+    &:open {
         summary {
         &::after {
                     transform: rotate(180deg);
