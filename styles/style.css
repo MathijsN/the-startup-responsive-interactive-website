@@ -59,7 +59,7 @@ details {
     border-radius: var(--spacing-s);
 
     padding: var(--spacing-s);
-    margin-block: var(--spacing-s);
+    /* margin-block: var(--spacing-s); */
 
     summary {
 
@@ -97,6 +97,7 @@ details {
         padding: var(--spacing-xs) var(--spacing-s);
         border-radius: var(--spacing-xs);
         background-color: var(--color-secondary);
+        margin-block: var(--spacing-s);
 
         &:open {
 
@@ -108,6 +109,25 @@ details {
         }
     }
 }
+
+fieldset {
+
+    border: 0;
+    margin-block: var(--spacing-s);
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap; /* keep on one line */
+      border: 0;
+    }
+}
+
 
 label {
     display: flex;
