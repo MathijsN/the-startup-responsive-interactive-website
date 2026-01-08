@@ -51,7 +51,7 @@ fieldset {
 
     details {
         padding: var(--spacing-medium) var(--spacing-large);
-        margin-block: var(--spacing-medium);
+        margin: var(--spacing-medium);
         border: 1px solid rgb(var(--color-grey-light));
         border-radius: var(--border-radius-small);
         background-color: rgb(var(--color-white-off));
@@ -60,6 +60,8 @@ fieldset {
         summary {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            line-height: 1.4;
 
                  &::after {
                     content: '';
@@ -78,6 +80,20 @@ fieldset {
                 &::after {
                     transform: rotate(180deg);
                 }
+            }
+        }
+
+        label {
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-block: var(--spacing-medium);
+
+            select {
+                width: max-content;
+                padding: var(--spacing-medium);
             }
         }
     }
