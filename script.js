@@ -38,3 +38,4 @@ window.addEventListener('command', function (ev) {
     ev.target.toggleAttribute('disabled')
 
 }, { capture: true });
+ 
