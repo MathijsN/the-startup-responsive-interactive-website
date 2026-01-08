@@ -52,7 +52,7 @@
 
 
     <link href="preferences_files/app.b1ee5efe.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles3.css">
+    <link rel="stylesheet" href="styles/stylestest2.css">
 
 
     <script async="" src="preferences_files/2645233825708249.js"></script>
@@ -67,8 +67,6 @@
     <script src="preferences_files/454.2f0ce88a.js"></script>
     <script src="preferences_files/557.f0125ef3.js"></script>
     <script src="preferences_files/app.7d365ce7.js"></script>
-
-    <script src="script.js" defer></script>
 
     <script>window.dataLayer = {
             push: function () {
@@ -378,10 +376,12 @@
 
                 <!-- THE DESIGN CHALLENGE STARTS HERE -->
 
+
                 <form action="#" method="post">
-                    <fieldset id="reservation-settings" disabled>
-                        <legend>
-                            <button type="button" commandfor="reservation-settings" command="--toggle-settings">
+                    <fieldset>
+                        <legend class="visually-hidden">Reservation</legend>
+                        <details>
+                            <summary>
                                 <span>
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -391,118 +391,49 @@
                                     </svg>
                                     Reservation
                                 </span>
-                            </button>
-                        </legend>
-                        <details>
-                            
-                            <summary>Reservation - requested</summary>
-                            
-                            <label>email
-                                <span class="input-switch">
-                                    <input checked="checked" class="input-switch--input" type="checkbox" disabled>
-                                    <span class="input-switch--span"></span>
-                                </span>
-                            </label>
-                            
-                            <label>push (app)
-                                <span class="input-switch">
-                                    <input class="input-switch--input" type="checkbox" disabled>
-                                    <span class="input-switch--span"></span>
-                                </span>
-                            </label>
-
-                            <label>text
-                                <select name="text">
-                                    <option value="disabled">disabled</option>
-                                    <option value="sms">sms</option>
-                                    <option value="wa">whatsapp</option>
-                                </select>
-                            </label>
-
-                        </details>
-                        
-                        <details>
-                            
-                            <summary>Reservation - open payment</summary>
-                            
-                            <label>email
-                                <span class="input-switch">
-                                    <input checked="checked" class="input-switch--input" type="checkbox" disabled>
-                                    <span class="input-switch--span"></span>
-                                </span>
-                            </label>
-                            
-                            <label>push (app)
-                                <span class="input-switch">
-                                    <input class="input-switch--input" type="checkbox" disabled>
-                                    <span class="input-switch--span"></span>
-                                </span>
-                            </label>
-
-                            <label>text
-                                <select name="text">
-                                    <option value="disabled">disabled</option>
-                                    <option value="sms">sms</option>
-                                    <option value="wa">whatsapp</option>
-                                </select>
-                            </label>
-
+                            </summary>
+                            <details>
+                                <summary>Reservation - requested
+                                </summary>
+                                <label>email 
+                                    <span class="input-switch">
+                                        <input checked="checked" class="input-switch--input" type="checkbox" disabled>
+                                        <span class="input-switch--span"></span>
+                                    </span>
+                                </label>
+                                <label>push (app) 
+                                    <span class="not-supported">Not supported</span>
+                                </label>
+                                <label>text
+                                    <span class="not-supported">Not supported</span>
+                                </label>
+                            </details>
+                            <details>
+                                <summary>Reservation - instant book created
+                                </summary>
+                                <label>email 
+                                    <span class="input-switch">
+                                        <input checked="checked" class="input-switch--input" type="checkbox">
+                                        <span class="input-switch--span"></span>
+                                    </span>
+                                </label>
+                                <label>push (app) 
+                                    <span class="input-switch">
+                                        <input class="input-switch--input" type="checkbox" disabled>
+                                        <span class="input-switch--span"></span>
+                                    </span>
+                                </label>
+                                <label>text <select name="text-message">
+                                        <option value="disabled">disabled</option>
+                                        <option value="sms">sms</option>
+                                        <option value="wa">whatsapp</option>
+                                    </select></label>
+                            </details>
+   
                         </details>
                     </fieldset>
-
-                    <fieldset id="cancelation-settings" disabled>
-                        <legend>
-                            <button type="button" commandfor="cancelation-settings" command="--toggle-settings">
-                                <span>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M0.75 14.75L7.75 7.75M7.75 7.75L14.75 0.75M7.75 7.75L0.75 0.75M7.75 7.75L14.75 14.75"
-                                            stroke="#4F4C4C" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    Cancelation
-                                </span>
-                            </button>
-                        </legend>
-                        <details>
-                            <summary>naam 1</summary>
-                            <label>email
-                                <span class="input-switch">
-                                    <input checked="checked" class="input-switch--input" type="checkbox" disabled>
-                                    <span class="input-switch--span"></span>
-                                </span>
-                            </label>
-                        </details>
-                    </fieldset>
-
-                    <fieldset id="reminder-settings" disabled>
-                        <legend>
-                            <button type="button" commandfor="reminder-settings" command="--toggle-settings">
-                                <span>
-                                    <svg width="17" height="18" viewBox="0 0 15 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.5 0C5.87274 0 4.31212 0.632141 3.16147 1.75736C2.01083 2.88258 1.3644 4.4087 1.3644 6V9.20267L0.0486538 12.4193C0.00734372 12.5204 -0.00801049 12.6299 0.00393376 12.7382C0.015878 12.8464 0.054757 12.9502 0.117172 13.0404C0.179587 13.1305 0.263638 13.2044 0.361978 13.2555C0.460319 13.3065 0.569955 13.3333 0.681302 13.3333H4.77307C4.77307 14.0406 5.06037 14.7189 5.57177 15.219C6.08317 15.719 6.77677 16 7.5 16C8.22323 16 8.91683 15.719 9.42823 15.219C9.93963 14.7189 10.2269 14.0406 10.2269 13.3333H14.3187C14.43 13.3333 14.5397 13.3065 14.638 13.2555C14.7364 13.2044 14.8204 13.1305 14.8828 13.0404C14.9452 12.9502 14.9841 12.8464 14.9961 12.7382C15.008 12.6299 14.9927 12.5204 14.9513 12.4193L13.6356 9.20267V6C13.6356 4.4087 12.9892 2.88258 11.8385 1.75736C10.6879 0.632141 9.12726 0 7.5 0ZM9.5452 13.3333C9.5452 13.8638 9.32972 14.3725 8.94618 14.7475C8.56263 15.1226 8.04242 15.3333 7.5 15.3333C6.95758 15.3333 6.43737 15.1226 6.05382 14.7475C5.67028 14.3725 5.4548 13.8638 5.4548 13.3333H9.5452ZM2.04613 6C2.04613 4.58551 2.62073 3.22896 3.64353 2.22876C4.66633 1.22857 6.05354 0.666667 7.5 0.666667C8.94646 0.666667 10.3337 1.22857 11.3565 2.22876C12.3793 3.22896 12.9539 4.58551 12.9539 6V9.20267C12.9538 9.28737 12.9702 9.37131 13.0023 9.45L14.318 12.6667H0.681302L1.99705 9.45C2.02934 9.37136 2.046 9.28741 2.04613 9.20267V6Z"
-                                            fill="#151515" />
-                                    </svg>
-                                    Reminders
-                                </span>
-                            </button>
-                        </legend>
-                        <details>
-                            <summary>naam 1</summary>
-                            <label>email
-                                <span class="input-switch">
-                                    <input checked="checked" class="input-switch--input" type="checkbox" disabled>
-                                    <span class="input-switch--span"></span>
-                                </span>
-                            </label>
-                        </details>
-                    </fieldset>
+                    <button type="submit">Save settings</button>
                 </form>
-
-
 
                 <!-- THE DESIGN CHALLENGE ENDS HERE -->
             </div>
