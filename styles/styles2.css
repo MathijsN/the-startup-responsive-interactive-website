@@ -1,0 +1,82 @@
+:root {
+    interpolate-size: allow-keywords;
+}
+
+details {
+
+    padding: var(--spacing-medium);
+    
+    border: 1px solid;
+    border-color: var(--color-grey-light);
+    border-radius: var(--border-radius-small);
+
+    transition: 2s;
+    overflow: hidden;
+
+    summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 1.4;
+
+        &::after {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23002544' d='m5.84 15.41l5.66-5.66l5.66 5.66l-.71.7l-4.95-4.95l-4.95 4.95z'/%3E%3C/svg%3E");
+            width: 1.6em;
+            height: 1.6em;
+            background-size: 100% 100%;
+            display: block;
+            transform: rotate(90deg);
+            flex-shrink: 0;
+        }
+    }
+
+    &:open {
+        background-color: var(--color-active);
+
+        >summary {
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+
+    label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-block: var(--spacing-medium);
+
+        font-size: 1rem;
+
+        select {
+            width: max-content;
+            text-align: center;
+            padding-inline: var(--spacing-medium);
+
+        }
+
+        span.not-supported {
+            color: rgb(var(--color-red));
+        }
+    }
+
+    > details {
+        margin-block: var(--spacing-medium);
+    }
+}
+
+details::details-content {
+    block-size: 0;
+
+    transition:
+        block-size 1s linear(0, 0.21 3.6%, 0.402 7.4%, 0.568 11.3%, 0.711 15.3%, 0.772 17.3%, 0.83 19.4%, 0.882 21.5%, 0.929 23.7%, 0.97 25.9%, 1.008 28.2%, 1.04 30.6%, 1.067 33%, 1.084 34.9%, 1.099 36.9%, 1.111 38.9%, 1.12 41%, 1.127 43.2%, 1.13 45.4%, 1.132 47.7%, 1.13 50.1%, 1.124 54%, 1.111 58.5%, 1.095 62.9%, 1.044 75.5%, 1.03 79.5%, 1.019 83.2%, 1.01 87.3%, 1.004 91.3%, 1.001 95.4%, 1),
+        content-visibility 1s linear(0, 0.21 3.6%, 0.402 7.4%, 0.568 11.3%, 0.711 15.3%, 0.772 17.3%, 0.83 19.4%, 0.882 21.5%, 0.929 23.7%, 0.97 25.9%, 1.008 28.2%, 1.04 30.6%, 1.067 33%, 1.084 34.9%, 1.099 36.9%, 1.111 38.9%, 1.12 41%, 1.127 43.2%, 1.13 45.4%, 1.132 47.7%, 1.13 50.1%, 1.124 54%, 1.111 58.5%, 1.095 62.9%, 1.044 75.5%, 1.03 79.5%, 1.019 83.2%, 1.01 87.3%, 1.004 91.3%, 1.001 95.4%, 1);
+
+    transition-behavior: allow-discrete;
+}
+
+details[open]::details-content {
+    block-size: auto;
+}

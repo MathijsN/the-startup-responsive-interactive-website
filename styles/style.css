@@ -139,6 +139,13 @@ label {
     }
 }
 
+input {
+    
+    &:checked:disabled {
+        color: red;
+    }
+}
+
 
 
 /* demo Joost:  https://codepen.io/joostf/pen/VKyPxZ */ 
