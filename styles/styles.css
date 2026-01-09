@@ -57,7 +57,6 @@ fieldset {
         padding: var(--spacing-medium) var(--spacing-large);
 
         summary {
-            /* padding-block: var(--spacing-medium); */
             display: flex;
             justify-content: space-between;
             align-items: center;
