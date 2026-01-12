@@ -29,16 +29,21 @@ if (!('CommandEvent' in window)) {
 
 
 form.addEventListener('submit', (ev) => {
-    ev.preventDefault()
-    console.log("submitted")
+
     if (!form.checkValidity()) {
         formSubmit.setAttribute("disabled")
-
     }
     else {
         formSubmit.removeAttribute("disabled")
+
         saveSettingsButtonSpan.classList.add('save-animation')
         saveSettingsButtonSvg.classList.add('save-animation')
+
+        setTimeout(() => {
+
+            saveSettingsButtonSpan.classList.remove('save-animation')
+            saveSettingsButtonSvg.classList.remove('save-animation')
+        }, 2000)
 
         ev.preventDefault()
     }

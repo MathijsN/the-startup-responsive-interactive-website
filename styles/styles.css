@@ -135,6 +135,15 @@ form {
             margin-top: var(--spacing-large);
             flex-shrink: 0;
         }
+
+        &:disabled {
+
+            pointer-events: none;
+            &:hover {
+
+                pointer-events: none;
+            }
+        }
     }
 }
 
