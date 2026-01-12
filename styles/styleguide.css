@@ -1,11 +1,10 @@
 :root {
-    --color-grey-dark: 79, 76, 76;
-    --color-grey-medium: 173, 181, 189;
-
-    /* light grey */
+    --color-primary: 17, 177, 138;
+    --color-primary-hover: 5, 117, 92;
+    --color-secondary: 255, 255, 255;
     --color-border: 231, 231, 231;
-
-    /* Off white */
+    --color-border-dark: 79, 76, 76;
+    --color-text: 0, 0, 0;
     --color-background-active: 251, 251, 251; 
 
     --spacing-small: 5px;

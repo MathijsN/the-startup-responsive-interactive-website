@@ -2,9 +2,9 @@ fieldset {
 
     &:disabled {
         display: flex;
-        
+
         legend {
-            display: block;
+            display: contents;
         }
 
         details {
@@ -62,16 +62,16 @@ fieldset {
             align-items: center;
             line-height: 1.4;
 
-                 &::after {
-                    content: '';
-                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23002544' d='m5.84 15.41l5.66-5.66l5.66 5.66l-.71.7l-4.95-4.95l-4.95 4.95z'/%3E%3C/svg%3E");
-                    width: 1.6em;
-                    height: 1.6em;
-                    background-size: 100% 100%;
-                    display: block;
-                    transform: rotate(90deg);
-                    flex-shrink: 0;
-                }
+            &::after {
+                content: '';
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23002544' d='m5.84 15.41l5.66-5.66l5.66 5.66l-.71.7l-4.95-4.95l-4.95 4.95z'/%3E%3C/svg%3E");
+                width: 1.6em;
+                height: 1.6em;
+                background-size: 100% 100%;
+                display: block;
+                transform: rotate(90deg);
+                flex-shrink: 0;
+            }
 
             @media (any-pointer: fine) {
                 &:hover {
@@ -102,5 +102,56 @@ fieldset {
                 text-align: center;
             }
         }
+    }
+}
+
+form {
+
+    &:valid {
+        button.save-button {
+            background-color: rgb(var(--color-primary));
+            color: rgb(var(--color-secondary));
+            border: none;
+        }
+    }
+
+    button.save-button {
+        border-radius: var(--border-radius-small);
+        background-color: rgb(var(--color-border));
+        color: rgb(var(--color-text));
+        border: 1px solid rgb(var(--color-border-dark));
+
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        height: 2.6rem;
+
+        &:hover {
+            background-color: rgb(var(--color-primary-hover));
+        }
+
+        svg {
+            align-self: center;
+            margin-top: var(--spacing-large);
+            flex-shrink: 0;
+        }
+    }
+}
+
+.save-animation {
+    animation: --save-button 1.3s ease;
+}
+
+
+@keyframes --save-button {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    15%,
+    85% {
+        transform: translateY(-2.1rem);
     }
 }
