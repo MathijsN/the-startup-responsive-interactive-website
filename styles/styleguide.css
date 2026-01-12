@@ -1,0 +1,19 @@
+:root {
+    --color-grey-dark: 79, 76, 76;
+    --color-grey-medium: 173, 181, 189;
+
+    /* light grey */
+    --color-border: 231, 231, 231;
+
+    /* Off white */
+    --color-background-active: 251, 251, 251; 
+
+    --spacing-small: 5px;
+    --spacing-medium: 10px;
+    --spacing-large: 20px;
+    --spacing-extralarge: 30px;
+
+    --border-radius-small: 5px;
+    --border-radius-medium: 15px;
+    --border-radius-large: 25px;
+}

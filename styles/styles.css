@@ -27,7 +27,7 @@ fieldset {
             justify-content: space-between;
             align-items: center;
             background-color: transparent;
-            border: 1px solid rgb(var(--color-grey-light));
+            border: 1px solid rgb(var(--color-border));
             border-radius: var(--border-radius-small);
             font-size: 1rem;
 
@@ -51,9 +51,9 @@ fieldset {
 
     details {
         margin: var(--spacing-medium);
-        border: 1px solid rgb(var(--color-grey-light));
+        border: 1px solid rgb(var(--color-border));
         border-radius: var(--border-radius-small);
-        background-color: rgb(var(--color-white-off));
+        background-color: rgb(var(--color-background-active));
         padding: var(--spacing-medium) var(--spacing-large);
 
         summary {
