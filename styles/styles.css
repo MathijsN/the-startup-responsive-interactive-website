@@ -1,3 +1,7 @@
+:root {
+    interpolate-size: allow-keywords;
+}
+
 button {
 
     &:hover,
@@ -60,11 +64,13 @@ fieldset {
 
 
     details {
-        margin: var(--spacing-medium);
+        margin: var(--spacing-large);
         border: 1px solid rgb(var(--color-border));
         border-radius: var(--border-radius-small);
         background-color: rgb(var(--color-background-active));
         padding: var(--spacing-medium) var(--spacing-large);
+
+        overflow: hidden;
 
         summary {
             display: flex;
@@ -90,11 +96,24 @@ fieldset {
             }
         }
 
-        &:open {
-            summary {
+        &::details-content {
+            /* logical property van height */
+            block-size: 0;
 
-                border-bottom: 1px solid rgb(var(--color-border));
-                padding-bottom: var(--spacing-medium);
+            transition: block-size 1s,
+                content-visibility 1s;
+            transition-timing-function: linear(0, 0.006 0.9%, 0.027 1.9%, 0.114 4.2%, 0.612 12.9%, 0.817 17.3%, 0.893 19.5%, 0.952 21.7%, 0.998 24%, 1.03 26.5%, 1.052 29.6%, 1.058 33.3%, 1.012 49.4%, 1 57.4%, 1);
+            transition-behavior: allow-discrete;
+        }
+
+        &:open {
+
+            &::details-content {
+                /* logical property van height */
+                block-size: auto;
+            }
+
+            summary {
 
                 &::after {
                     transform: rotate(180deg);
@@ -108,7 +127,9 @@ fieldset {
             justify-content: space-between;
             align-items: center;
 
-            margin-block: var(--spacing-medium);
+            margin-block: var(--spacing-large);
+            padding-block: var(--spacing-small);
+            border-bottom: 1px solid rgb(var(--color-border));
 
             select {
                 width: max-content;
