@@ -1,10 +1,14 @@
 button {
-    &:hover, &:focus, &:active {
+
+    &:hover,
+    &:focus,
+    &:active {
         background-color: unset;
     }
 }
 
 fieldset {
+
 
     &:disabled {
         display: flex;
@@ -88,6 +92,10 @@ fieldset {
 
         &:open {
             summary {
+
+                border-bottom: 1px solid rgb(var(--color-border));
+                padding-bottom: var(--spacing-medium);
+
                 &::after {
                     transform: rotate(180deg);
                 }
@@ -118,6 +126,10 @@ form {
             background-color: rgb(var(--color-primary));
             color: rgb(var(--color-secondary));
             border: none;
+
+            &:hover {
+                background-color: rgb(var(--color-primary-hover));
+            }
         }
     }
 
@@ -132,10 +144,6 @@ form {
         overflow: hidden;
         height: 2.6rem;
 
-        &:hover {
-            background-color: rgb(var(--color-primary-hover));
-        }
-
         svg {
             align-self: center;
             margin-top: var(--spacing-large);
@@ -145,6 +153,7 @@ form {
         &:disabled {
 
             pointer-events: none;
+
             &:hover {
 
                 pointer-events: none;
