@@ -120,6 +120,14 @@ fieldset {
 }
 
 form {
+    input.input-switch--input:checked {
+        background-color: rgb(var(--color-border-dark));
+        border: none;
+    }
+
+    span.no-support {
+        color: rgb(var(--color-danger));
+    }
 
     &:valid {
         button.save-button {

@@ -48,6 +48,7 @@ form.addEventListener('submit', (ev) => {
 
         ev.preventDefault()
 
+        // Na x aantal tijd de classes weer weghalen
         setTimeout(() => {
 
             saveSettingsButtonSpan.classList.remove('save-animation')
@@ -67,7 +68,7 @@ inputs.forEach(input => {
             // Voor elke input de array aanvullen met een true of false, kijkend naar een valid input.
             validityArr.push(input.checkValidity())
         })
-        
+
         // Array reset zodat het niet blijft aanvullen
         validityArr = []
     })
