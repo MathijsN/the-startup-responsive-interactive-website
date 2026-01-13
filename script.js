@@ -9,6 +9,9 @@ const fieldsets = document.querySelectorAll('fieldset')
 
 let validityArr = []
 
+
+// Ondersteund de browser 'CommandEvent'?
+// Zo niet dan:
 if (!('CommandEvent' in window)) {
 
     buttons.forEach(button => {
@@ -16,16 +19,15 @@ if (!('CommandEvent' in window)) {
 
             const fieldset = ev.target.closest("fieldset")
 
-            // fieldset.toggleAttribute("disabled")
             fieldset.classList.toggle("disabled-fieldset")
         })
     })
 
+    // Zo wel dan:
 } else {
 
     window.addEventListener('command', function (ev) {
 
-        // ev.target.toggleAttribute('disabled')
         ev.target.classList.toggle('disabled-fieldset')
     }, { capture: true });
 
@@ -34,6 +36,8 @@ if (!('CommandEvent' in window)) {
 
 
 form.addEventListener('submit', (ev) => {
+
+    // Zijn alle required inputs ingevuld?
 
     if (validityArr.every(item => {
         item === true
@@ -53,17 +57,25 @@ form.addEventListener('submit', (ev) => {
 })
 
 inputs.forEach(input => {
+
+    // Bij elke verandering in een input:
     input.addEventListener('change', () => {
         console.log(validityArr)
 
         inputs.forEach(input => {
 
+            // Voor elke input de array aanvullen met een true of false, kijkend naar een valid input.
             validityArr.push(input.checkValidity())
         })
+        
+        // Array reset zodat het niet blijft aanvullen
         validityArr = []
     })
 })
 
+
+
+// Zodat browsers zonder JS het ook kunnen gebruiken voeg ik hier pas de class toe
 
 function addInitialFieldsetClass() {
     fieldsets.forEach(fieldset => {
