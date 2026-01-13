@@ -5,6 +5,7 @@ const saveSettingsButtonSvg = document.querySelector('.save-button svg')
 const form = document.querySelector('.settings-form')
 const formSubmit = document.querySelector('.save-button')
 const inputs = document.querySelectorAll('input[type="checkbox"][required]')
+const fieldsets = document.querySelectorAll('fieldset')
 
 let validityArr = []
 
@@ -42,9 +43,9 @@ form.addEventListener('submit', (ev) => {
         saveSettingsButtonSvg.classList.add('save-animation')
 
         ev.preventDefault()
-    
+
         setTimeout(() => {
-    
+
             saveSettingsButtonSpan.classList.remove('save-animation')
             saveSettingsButtonSvg.classList.remove('save-animation')
         }, 2000)
@@ -52,13 +53,22 @@ form.addEventListener('submit', (ev) => {
 })
 
 inputs.forEach(input => {
-        input.addEventListener('change', () => {
-            console.log(validityArr)
+    input.addEventListener('change', () => {
+        console.log(validityArr)
 
-            inputs.forEach(input => {
+        inputs.forEach(input => {
 
-                validityArr.push(input.checkValidity())
-            })
-        validityArr = []
+            validityArr.push(input.checkValidity())
         })
+        validityArr = []
     })
+})
+
+
+function addInitialFieldsetClass() {
+    fieldsets.forEach(fieldset => {
+        fieldset.classList.add('disabled-fieldset')
+    })
+}
+
+addInitialFieldsetClass()
