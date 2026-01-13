@@ -10,7 +10,7 @@ button {
 fieldset {
 
 
-    &:disabled {
+    &.disabled-fieldset {
         display: flex;
 
         legend {
@@ -179,3 +179,6 @@ form {
         transform: translateY(-2.1rem);
     }
 }
+
+
+.disabled-fieldset

@@ -15,7 +15,8 @@ if (!('CommandEvent' in window)) {
 
             const fieldset = ev.target.closest("fieldset")
 
-            fieldset.toggleAttribute("disabled")
+            // fieldset.toggleAttribute("disabled")
+            fieldset.classList.toggle("disabled-fieldset")
         })
     })
 
@@ -23,7 +24,8 @@ if (!('CommandEvent' in window)) {
 
     window.addEventListener('command', function (ev) {
 
-        ev.target.toggleAttribute('disabled')
+        // ev.target.toggleAttribute('disabled')
+        ev.target.classList.toggle('disabled-fieldset')
     }, { capture: true });
 
 }
@@ -38,7 +40,6 @@ form.addEventListener('submit', (ev) => {
 
         saveSettingsButtonSpan.classList.add('save-animation')
         saveSettingsButtonSvg.classList.add('save-animation')
-        formSubmit.removeAttribute('disabled')
 
         ev.preventDefault()
     
@@ -47,11 +48,7 @@ form.addEventListener('submit', (ev) => {
             saveSettingsButtonSpan.classList.remove('save-animation')
             saveSettingsButtonSvg.classList.remove('save-animation')
         }, 2000)
-
-    } else {
-        formSubmit.setAttribute('disabled')
     }
-
 })
 
 inputs.forEach(input => {
