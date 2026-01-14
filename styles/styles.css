@@ -13,7 +13,6 @@ button {
 
 fieldset {
 
-
     &.disabled-fieldset {
         display: flex;
 
@@ -140,6 +139,13 @@ fieldset {
     }
 }
 
+@supports (animation: calc(0.2s * sibling-index())) {
+    details {
+        opacity: 0;
+        animation: --details-in 0.3s ease calc(0.2s * sibling-index()) 1 forwards;
+    }
+}
+
 form {
     input.input-switch--input:checked {
         background-color: rgb(var(--color-border-dark));
@@ -195,6 +201,21 @@ form {
     animation: --save-button 1.3s ease;
 }
 
+@keyframes --details-in {
+    0% {
+        translate: -5rem 0;
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
 
 @keyframes --save-button {
 
