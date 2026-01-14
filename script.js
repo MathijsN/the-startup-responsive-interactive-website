@@ -6,6 +6,7 @@ const form = document.querySelector('.settings-form')
 const formSubmit = document.querySelector('.save-button')
 const inputs = document.querySelectorAll('input[type="checkbox"][required]')
 const fieldsets = document.querySelectorAll('fieldset')
+const disabledInputs = document.querySelectorAll('label:has(input[type="checkbox"][disabled])')
 
 let validityArr = []
 
@@ -85,3 +86,11 @@ function addInitialFieldsetClass() {
 }
 
 addInitialFieldsetClass()
+
+
+
+disabledInputs.forEach(input => {
+    input.addEventListener('click', () => {
+        window.alert("this option can't be changed at this moment.")
+    })
+})

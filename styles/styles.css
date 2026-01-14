@@ -126,14 +126,21 @@ fieldset {
             justify-content: space-between;
             align-items: center;
 
+            &:has(input) {
+                cursor: pointer;
+            }
+
             margin-block: var(--spacing-large);
             padding-block: var(--spacing-small);
-            border-bottom: 1px solid rgb(var(--color-border));
 
             select {
                 width: max-content;
                 padding: var(--spacing-medium);
                 text-align: center;
+            }
+
+            input[disabled] {
+                pointer-events: none;
             }
         }
     }
