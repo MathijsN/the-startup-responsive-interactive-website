@@ -21,14 +21,10 @@ fieldset {
         }
 
         details {
-            display: none;
+                display: none;
         }
 
         button {
-
-            svg {
-                margin-right: 0.5rem;
-            }
             &::after {
                 transform: rotate(90deg);
             }
@@ -61,6 +57,7 @@ fieldset {
 
             svg {
                 transform: translateY(-2px);
+                margin-right: 0.5rem;
             }
         }
     }
@@ -74,6 +71,7 @@ fieldset {
         padding: var(--spacing-medium) var(--spacing-large);
 
         overflow: hidden;
+        opacity: 0;
 
         summary {
             display: flex;
@@ -152,8 +150,7 @@ fieldset {
 
 @supports (animation: calc(0.2s * sibling-index())) {
     details {
-        opacity: 0;
-        animation: --details-in 0.3s ease calc(0.2s * sibling-index()) 1 forwards;
+        animation: --details-in 0.2s ease calc(0.2s * sibling-index()) 1 forwards;
     }
 }
 
@@ -229,13 +226,10 @@ form {
         opacity: 0;
     }
 
-    80% {
-        opacity: 1;
-    }
-
     100% {
-        opacity: 1;
+
         translate: 0 0;
+        opacity: 1;
     }
 }
 
