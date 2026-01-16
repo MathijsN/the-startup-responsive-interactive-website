@@ -154,6 +154,8 @@ fieldset {
 }
 
 form {
+    position: relative;
+
     input.input-switch--input:checked {
         background-color: rgb(var(--color-border-dark));
         border: none;
@@ -185,6 +187,11 @@ form {
         flex-direction: column;
         overflow: hidden;
         height: 2.6rem;
+        width: 100%;
+
+        position: sticky;
+        bottom: 2rem;
+        z-index: 10;
 
         svg {
             align-self: center;
