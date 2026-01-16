@@ -190,8 +190,12 @@ form {
         width: 100%;
 
         position: sticky;
-        bottom: 2rem;
+        bottom: 5.2rem;
         z-index: 10;
+
+        @media (width > 1023px) {
+            bottom: 2rem;
+        }
 
         svg {
             align-self: center;
