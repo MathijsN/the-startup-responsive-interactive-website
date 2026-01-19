@@ -15,7 +15,7 @@ fieldset {
 
     &.animate-fieldset {
         overflow: hidden;
-        animation: --fieldset-expand 2.8s ease;
+        animation: --fieldset-expand 3.2s ease;
     }
 
     &.disabled-fieldset {
@@ -154,7 +154,7 @@ fieldset {
 
 @supports (animation: calc(0.2s * sibling-index())) {
     details {
-        animation: --details-in 0.2s ease calc(0.2s * sibling-index()) 1 forwards;
+        animation: --details-in 0.1s ease calc(0.1s * sibling-index()) 1 forwards;
         opacity: 0;
     }
 }
@@ -256,6 +256,6 @@ form {
     }
 
     100% {
-        max-height: 30rem;
+        max-height: 100rem;
     }
 }
