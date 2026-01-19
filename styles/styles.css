@@ -73,6 +73,14 @@ fieldset {
         overflow: hidden;
         opacity: 0;
 
+        max-height: max-content;
+        transition: max-height 1s ease allow-discrete;
+
+        @starting-style {
+            max-height: 0;
+            /* height: 0; */
+        }
+
         summary {
             display: flex;
             justify-content: space-between;
