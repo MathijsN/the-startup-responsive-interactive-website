@@ -21,6 +21,7 @@ if (!('CommandEvent' in window)) {
             const fieldset = ev.target.closest("fieldset")
 
             fieldset.classList.toggle("disabled-fieldset")
+            fieldset.classList.toggle("animate-fieldset")
         })
     })
 
@@ -30,6 +31,7 @@ if (!('CommandEvent' in window)) {
     window.addEventListener('command', function (ev) {
 
         ev.target.classList.toggle('disabled-fieldset')
+        ev.target.classList.toggle('animate-fieldset')
     }, { capture: true });
 
 }
