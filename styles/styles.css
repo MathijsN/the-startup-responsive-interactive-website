@@ -139,6 +139,16 @@ fieldset {
             margin-block: var(--spacing-large);
             padding-block: var(--spacing-small);
 
+            .input-switch--input {
+                background: rgb(var(--color-border-dark));
+                border-color: rgb(var(--color-border-dark));
+
+                &:checked {
+                    background-color: rgb(var(--color-primary-hover));
+                }
+            }
+
+
             select {
                 width: max-content;
                 padding: var(--spacing-medium);
@@ -173,12 +183,12 @@ form {
 
     &:valid {
         button.save-button {
-            background-color: rgb(var(--color-primary));
+            background-color: rgb(var(--color-primary-hover));
             color: rgb(var(--color-secondary));
             border: none;
 
             &:hover {
-                background-color: rgb(var(--color-primary-hover));
+                scale: 1.01;
             }
         }
     }
