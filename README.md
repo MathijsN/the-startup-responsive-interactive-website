@@ -28,11 +28,13 @@ CSS is used to style this page. There are multiple animations which uses disney 
 The websites works without Javascript but shines when it's enabled. I made multiple functions to check and trigger different events. For example, JS checks if all input fields who have the attribute 'required' are active. If so, the submit button turns green and is ready to submit the form. Pressed a disabled input field? JS will alert you that this specific input is (currently) not changeable.
 
 ## Bronnen
-[@starting-style](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@starting-style)
-[sibling-index()](https://css-tricks.com/almanac/functions/s/sibling-index/)
-[fieldset animation](https://developer.chrome.com/blog/entry-exit-animations)
-[bubbling and capturing](https://javascript.info/bubbling-and-capturing)
-[JS input validity check](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity)
+- [@starting-style](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@starting-style)
+- [sibling-index()](https://css-tricks.com/almanac/functions/s/sibling-index/)
+- [fieldset animation](https://developer.chrome.com/blog/entry-exit-animations)
+- [bubbling and capturing](https://javascript.info/bubbling-and-capturing)
+- [JS input validity check](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity)
+- [feature detection JS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection)
+- [@supports (sibling index fallback)](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@supports)
 
 
 ## Licentie
