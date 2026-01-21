@@ -17,7 +17,7 @@ The goal of this project is to make the settings page for the notifications acce
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
 ### HTML
-I used a fieldset to group the different notificaion types. This fieldset can be toggled to show its content. This makes it easier for the user to navigate and find the specific notification they are looking for. Within the fieldset I used a details tag to split the options even more. The title of the specific notification is shown, but the options to turn them on/off are not. The option to toggle the notification is shown when the details are open.
+I used a fieldset to group the different notification types. This fieldset can be toggled to show its content. This makes it easier for the user to navigate and find the specific notification they are looking for. Within the fieldset I used a details tag to split the options even more. The title of the specific notification is shown, but the options to turn them on/off are not. The option to toggle the notification is shown when the details are open.
 
 The whole page is checked for keyboard navigation, color contrast and other WCAG requirements.
 
@@ -25,7 +25,7 @@ The whole page is checked for keyboard navigation, color contrast and other WCAG
 CSS is used to style this page. There are multiple animations which uses disney principles to please the eyes.
 
 ### JS
-The websites works without Javascript but shines when it's enabled. I made multiple functions to check and trigger different events. For example, JS checks if all input fields who has the attribute 'required' are active. If so, the submit button turns green and is ready to submit the form. Pressed a disabled input field? JS will alert you that this specific input is (currently) not changeable.
+The websites works without Javascript but shines when it's enabled. I made multiple functions to check and trigger different events. For example, JS checks if all input fields who have the attribute 'required' are active. If so, the submit button turns green and is ready to submit the form. Pressed a disabled input field? JS will alert you that this specific input is (currently) not changeable.
 
 ## Bronnen
 
