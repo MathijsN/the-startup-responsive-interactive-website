@@ -35,6 +35,7 @@ The websites works without Javascript but shines when it's enabled. I made multi
 - [JS input validity check](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity)
 - [feature detection JS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection)
 - [@supports (sibling index fallback)](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@supports)
+- [Height animation](https://developer.chrome.com/docs/css-ui/animate-to-height-auto)
 
 
 ## Licentie
