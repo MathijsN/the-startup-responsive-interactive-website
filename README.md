@@ -30,6 +30,10 @@ The websites works without Javascript but shines when it's enabled. I made multi
 ## Bronnen
 [@starting-style](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@starting-style)
 [sibling-index()](https://css-tricks.com/almanac/functions/s/sibling-index/)
+[fieldset animation](https://developer.chrome.com/blog/entry-exit-animations)
+[bubbling and capturing](https://javascript.info/bubbling-and-capturing)
+[JS input validity check](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity)
+
 
 ## Licentie
 
