@@ -1,8 +1,6 @@
-Ontwerp en maak een responsive website voor een startup.
-
-De instructies voor deze opdracht staan in: [INSTRUCTIONS.md](https://github.com/fdnd-task/the-startup-responsive-interactieve-website/blob/main/docs/INSTRUCTIONS.md)
-
 # Campspace
+
+[Live link](https://mathijsn.github.io/the-startup-responsive-interactive-website/)
 
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 
@@ -11,8 +9,6 @@ De instructies voor deze opdracht staan in: [INSTRUCTIONS.md](https://github.com
 
 
 The goal of this project is to make the settings page for the notifications accessible and user friendly.
-
-[Live link](https://mathijsn.github.io/the-startup-responsive-interactive-website/)
 
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
 ### HTML
@@ -37,6 +33,10 @@ The websites works without Javascript but shines when it's enabled. I made multi
 - [Height animation](https://developer.chrome.com/docs/css-ui/animate-to-height-auto)
 - [command and commandFor](https://developer.chrome.com/blog/command-and-commandfor)
 
+
+##Ontwerp en maak een responsive website voor een startup.
+
+De instructies voor deze opdracht staan in: [INSTRUCTIONS.md](https://github.com/fdnd-task/the-startup-responsive-interactieve-website/blob/main/docs/INSTRUCTIONS.md)
 
 ## Licentie
 
